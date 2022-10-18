@@ -3,6 +3,10 @@
 /* setting */
 
 /* reset */
+html {
+    box-sizing: border-box;
+}
+
 .txt-hide {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -12,16 +16,24 @@
     overflow: hidden;
 }
 
+h1,
+p {
+    margin: 0;
+}
+
 /* design */
 
 /* layout */
 
+/* app */
 #app {
     width: 100vw;
     height: 100vh;
     perspective: 1600px;
     text-align: center;
 }
+
+/* 음악 리스트 */
 .list-music {
     position: fixed;
     width: 250px;
@@ -34,6 +46,7 @@
     transition: 0.3s;
 }
 
+/* 음악 아이템 */
 .list-music li {
     position: absolute;
     top: 0;
