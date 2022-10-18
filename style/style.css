@@ -1,10 +1,23 @@
 /* animation */
-
+@keyframes turn-on {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.1) rotate(360deg);
+    }
+}
 /* setting */
-
+@font-face {
+    font-family: "MonoplexKR-Italic";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
 /* reset */
 html {
     box-sizing: border-box;
+    font-family: "MonoplexKR-Italic";
 }
 
 .txt-hide {
@@ -33,6 +46,10 @@ p {
     text-align: center;
 }
 
+.logo {
+    padding: 4rem 0 0.5rem;
+}
+
 /* 음악 리스트 */
 .list-music {
     position: fixed;
@@ -56,11 +73,30 @@ p {
     backface-visibility: hidden;
 }
 
+.list-music .tit-music {
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.list-music .txt-album {
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+    word-break: break-all;
+
+    color: rgb(163, 163, 163);
+}
+
 .list-music li img {
     object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.active {
+    transform: scale(1.1);
+    animation: turn-on 10s infinite linear;
 }
 
 .list-music li:nth-child(1) {
