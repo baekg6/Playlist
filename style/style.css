@@ -16,4 +16,66 @@
 
 /* layout */
 
+#app {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1600px;
+    text-align: center;
+}
+.list-music {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    /* margin: -200px 0 0 -170px; */
+    transform: translate(-50%, -50%) rotateY(100deg);
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+
+.list-music li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.list-music li img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.list-music li:nth-child(1) {
+    transform: rotateY(0) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(2) {
+    transform: rotateY(calc(360deg / 7)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(3) {
+    transform: rotateY(calc(360deg / 7 * 2)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(4) {
+    transform: rotateY(calc(360deg / 7 * 3)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(5) {
+    transform: rotateY(calc(360deg / 7 * 4)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(6) {
+    transform: rotateY(calc(360deg / 7 * 5)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
+.list-music li:nth-child(7) {
+    transform: rotateY(calc(360deg / 7 * 6)) translateZ(calc(340px * 7 / 3.14 / 2));
+}
+
 /* media query */
